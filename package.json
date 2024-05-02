@@ -51,6 +51,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://travelapp-api.vercel.app/api"
+  "proxy": "https://api-3-feun.onrender.com/api"
 
 }

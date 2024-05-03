@@ -9,7 +9,7 @@ function Form() {
   const [blockedDates, setBlockedDates] = useState([]);
 
   useEffect(() => {
-    axios.get('/gettravel')
+    axios.get('https://api-3-feun.onrender.com/api/gettravel')
       .then(response => {
         console.log(response.data)
         const dates = response.data.map(reservation => ({

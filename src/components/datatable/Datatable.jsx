@@ -15,7 +15,7 @@ const Datatable = ({ columns }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`/${path}`);
+        const response = await axios.get(`https://api-3-feun.onrender.com/api/${path}`);
         setList(response.data);
       } catch (err) {
         console.error("Error fetching data:", err);
@@ -29,7 +29,7 @@ const Datatable = ({ columns }) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/${path}/${id}`);
+      await axios.delete(`https://api-3-feun.onrender.com/api/${path}/${id}`);
       setList((prevList) => prevList.filter((item) => item._id !== id));
     } catch (err) {
       console.error("Error deleting item:", err);
@@ -62,7 +62,7 @@ const Datatable = ({ columns }) => {
     <div className="datatable">
       <div className="datatableTitle">
         {path}
-        <Link to={`/${path}/new`} className="link">
+        <Link to={`https://api-3-feun.onrender.com/api/${path}/new`} className="link">
           Add New
         </Link>
       </div>

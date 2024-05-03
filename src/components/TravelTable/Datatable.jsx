@@ -18,7 +18,7 @@ const DataTable = () => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get('/confirmb/gettravel/travel');
+          const response = await axios.get('https://api-3-feun.onrender.com/api/confirmb/gettravel/travel');
           if (Array.isArray(response.data)) {
             setData(response.data);
             setLoading(false);

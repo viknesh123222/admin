@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Featured = () => {
   const navigate=useNavigate();
   const { data, loading, error } = useFetch(
-    "/hotels/countByCity?cities=travel,mahal,lodge"
+    "https://api-3-feun.onrender.com/api/hotels/countByCity?cities=travel,mahal,lodge"
   )
  
 
